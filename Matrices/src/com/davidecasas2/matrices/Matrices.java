@@ -52,4 +52,22 @@ public class Matrices {
 			}
 		}
 	}
+	
+	/**
+	 * Método de la clase que indica si todos los elemento de un matriz son cero o no 
+	 * @param matriz la matriz a comprobar
+	 * @return true si son todos cero y falso en caso contrario
+	 */
+	public static boolean sonTodosCero(int matriz [][]) {
+		boolean soncero=true;
+		
+		for (int i = 0; i < matriz.length && soncero; i++) {
+			for (int j = 0; j < matriz[0].length && soncero; j++) {
+				if (matriz[i][j]!=0) {
+					soncero=false;
+				} 
+			}
+		}
+		return soncero;
+	}
 }
