@@ -38,4 +38,18 @@ public class Matrices {
 			System.out.println();
 		}
 	}
+	
+	/**
+	 * Método que incializa una matriz a un valor pasado como parámetro
+	 * @param matriz la matriz a inicializar
+	 * @param num el valor utilizado en la incialización
+	 * @
+	 */
+	public static void incializar(int matriz[][], int num) {
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[0].length; j++) {
+				matriz[i][j]=num;
+			}
+		}
+	}
 }
