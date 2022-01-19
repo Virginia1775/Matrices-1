@@ -130,4 +130,40 @@ public class Matrices {
 	public static boolean esDiagonal(int m[][]) {
 		return esTRiangularInf(m) && esTRiangularSup(m);
 	}
+	
+	/**
+	 * Método que devuelve el mayor elemetno de la matriz
+	 * @param m la matriz a comprobar
+	 * @return int co el número mayor de la matriz
+	 */
+	public static int max_valor(int m[][]) {
+		int mayor = m[0][0];
+		
+		for (int i = 0; i < m.length; i++) {
+			for (int j = 0; j < m[0].length; j++) {
+				if (m[i][j] > mayor) {
+					mayor = m[i][j];
+				}
+			}
+		}
+		return mayor;
+	}
+	
+	/**
+	 * Método que devuelve el menor elemetno de la matriz
+	 * @param m la matriz a comprobar
+	 * @return int co el número menor de la matriz
+	 */
+	public static int min_valor(int m[][]) {
+		int menor = m[0][0];
+		
+		for (int i = 0; i < m.length; i++) {
+			for (int j = 0; j < m[0].length; j++) {
+				if (m[i][j] < menor) {
+					menor = m[i][j];
+				}
+			}
+		}
+		return menor;
+	}
 }
