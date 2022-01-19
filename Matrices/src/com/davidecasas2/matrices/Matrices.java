@@ -70,4 +70,24 @@ public class Matrices {
 		}
 		return soncero;
 	}
+	
+	/**
+	 * Método de la clase que cuenta cuantos númreos de la matriz son iguales a uno 
+	 * dado como parámetro
+	 * @param matriz la matriz a comprobar
+	 * @param a el valor a buscar
+	 * @return int con el número de ocurrencias
+	 */
+	public static int cuantos_son_a(int matriz[][], int a) {
+		int contador = 0;
+		
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[0].length; j++) {
+				if (matriz[i][j]==a) {
+					contador++;
+				}
+			}
+		}
+		return contador;
+	}
 }

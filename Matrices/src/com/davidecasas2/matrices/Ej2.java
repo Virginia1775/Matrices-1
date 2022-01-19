@@ -29,7 +29,13 @@ public class Ej2 {
 		
 		//boolean res = Matrices.sonTodosCero(matriz);
 		
-		if (Matrices.sonTodosCero(matriz)) {
+		/*if (Matrices.sonTodosCero(matriz)) {
+			System.out.println("LA matriz solo contiene ceros");
+		} else {
+			System.out.println("LA matriz tiene numeros distinto de cero");
+		}*/
+		
+		if (Matrices.cuantos_son_a(matriz, 0)==filas*columnas) {
 			System.out.println("LA matriz solo contiene ceros");
 		} else {
 			System.out.println("LA matriz tiene numeros distinto de cero");
