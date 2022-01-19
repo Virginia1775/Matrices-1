@@ -90,4 +90,44 @@ public class Matrices {
 		}
 		return contador;
 	}
+	
+	/**
+	 * Función que calcula si un matriz es tringular superior
+	 * @param matriz la matriz a calcular
+	 * @return true si triangular superior y false en caso contrario
+	 */
+	public static boolean esTRiangularSup(int matriz [][]) {
+		boolean triangsup=true;
+		
+		for (int i = 1; i < matriz.length && triangsup; i++) {
+			for (int j = 0; j <i && triangsup; j++) {
+				if (matriz[i][j]!=0) {
+					triangsup=false;
+				} 
+			}
+		}
+		return triangsup;
+	}
+	
+	/**
+	 * Función que calcula si un matriz es tringular inferior
+	 * @param matriz la matriz a calcular
+	 * @return true si triangular superior y false en caso contrario
+	 */
+	public static boolean esTRiangularInf(int matriz [][]) {
+		boolean trianginf=true;
+		
+		for (int i = 0; i < matriz.length-1 && trianginf; i++) {
+			for (int j = i+1; j <matriz.length && trianginf; j++) {
+				if (matriz[i][j]!=0) {
+					trianginf=false;
+				} 
+			}
+		}
+		return trianginf;
+	}
+	
+	public static boolean esDiagonal(int m[][]) {
+		return esTRiangularInf(m) && esTRiangularSup(m);
+	}
 }
