@@ -166,4 +166,26 @@ public class Matrices {
 		}
 		return menor;
 	}
+	
+	public static int determinante(int m[][]) {
+		return m[0][0]*m[1][1]*m[2][2] + m[1][0]*m[2][1]*m[0][2] + m[1][0]*m[0][1]*m[1][2]
+			  -m[2][0]*m[1][1]*m[0][2] - m[0][0]*m[2][1]*m[1][2] - m[0][1]*m[1][0]*m[2][2];		
+				
+	}
+	
+	/**
+	 * Método que devuelve la matriz traspuesta de la matriz pasada como parámetro.
+	 * @param m la matriz a trasponer
+	 * @return la matriz traspuesta
+	 */
+	public static int[][] trasponer (int m[][]) {
+		int traspuesta [][] = new int[m[0].length][m.length];
+		
+		for (int i = 0; i < traspuesta.length; i++) {
+			for (int j = 0; j < traspuesta[0].length; j++) {
+				traspuesta[i][j] = m[j][i];
+			}
+		}
+		return traspuesta;
+	}
 }
