@@ -208,4 +208,39 @@ public class Matrices {
 		}
 		return c;
 	}
+	
+	/**
+	 * Método que devuelve un vector con las medias aritneticas de cada fila de la 
+	 * matriz
+	 * @param m la matriz a calcular
+	 * @param v el vector con las medias
+	 */
+	public static void media_filas(int m[][], double v[]) {
+		double suma = 0;
+		for (int i = 0; i < m.length; i++) {
+			suma=0;
+			for (int j = 0; j < m[0].length; j++) {
+				suma=suma+m[i][j];
+			}
+			v[i]=suma/m[0].length;
+		}
+	}
+	
+	/**
+	 * Método que devuelve un vector con las medias aritneticas de cada columna de la 
+	 * matriz
+	 * @param m la matriz a calcular
+	 * @param v el vector con las medias
+	 */
+	public static void media_columnas(int m[][], double v[]) {
+		double suma = 0;
+		
+		for (int j = 0; j < m[0].length; j++) {
+			suma=0;
+			for (int i = 0; i < m.length; i++) {
+				suma=suma+m[i][j];
+			}
+			v[j]=suma/m.length;
+		}
+	}
 }
